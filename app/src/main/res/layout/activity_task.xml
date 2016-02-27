@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ly.schedule.TaskActivity">
+
+    <TextView android:id="@+id/task_name"
+        android:text="项目名称:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/input_name"/>
+    <EditText android:id="@id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/task_name"/>
+    <RadioGroup android:id="@+id/radio_group_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_name"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/type_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作"/>
+        <RadioButton android:id="@+id/type_study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学习"/>
+        <RadioButton android:id="@+id/type_interest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兴趣"/>
+    </RadioGroup>
+    <RadioGroup android:id="@+id/radio_group_importance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group_type"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/importance_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重要"/>
+        <RadioButton android:id="@+id/importance_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一般"/>
+        <RadioButton android:id="@+id/importance_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不重要"/>
+    </RadioGroup>
+    <Button android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:text="完成"/>
+</RelativeLayout>
